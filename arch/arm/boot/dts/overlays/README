@@ -190,6 +190,21 @@ Load:   dtoverlay=bmp085_i2c-sensor
 Params: <None>
 
 
+Name:   dht11
+Info:   Overlay for the DHT11/DHT21/DHT22 humidity/temperature sensors
+        Also sometimes found with the part number(s) AM230x.
+Load:   dtoverlay=dht11,<param>=<val>
+Params: gpiopin                  GPIO connected to the sensor's DATA output.
+                                 (default 4)
+
+
+Name:   dwc-otg
+Info:   Selects the dwc_otg USB controller driver which has fiq support. This
+        is the default on all except the Pi Zero which defaults to dwc2.
+Load:   dtoverlay=dwc-otg
+Params: <None>
+
+
 Name:   dwc2
 Info:   Selects the dwc2 USB controller driver
 Load:   dtoverlay=dwc2,<param>=<val>
@@ -202,21 +217,6 @@ Params: dr_mode                  Dual role mode: "host", "peripheral" or "otg"
 
         g-tx-fifo-size           Size of periodic tx fifo per endpoint
                                  (except ep0) in gadget mode
-
-
-Name:   dwc-otg
-Info:   Selects the dwc_otg USB controller driver which has fiq support. This
-        is the default on all except the Pi Zero which defaults to dwc2.
-Load:   dtoverlay=dwc-otg
-Params: <None>
-
-
-Name:   dht11
-Info:   Overlay for the DHT11/DHT21/DHT22 humidity/temperature sensors
-        Also sometimes found with the part number(s) AM230x.
-Load:   dtoverlay=dht11,<param>=<val>
-Params: gpiopin                  GPIO connected to the sensor's DATA output.
-                                 (default 4)
 
 
 [ The ds1307-rtc overlay has been deleted. See i2c-rtc. ]
