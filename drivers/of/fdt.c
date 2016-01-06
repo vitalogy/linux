@@ -984,7 +984,7 @@ int __init early_init_dt_scan_chosen(unsigned long node, const char *uname,
 #endif
 	}
 #else /* CONFIG_CMDLINE */
-	if (p != NULL && l > 0)	{
+	if (p != NULL && l > 0)
 		strlcpy(data, p, min((int)l, COMMAND_LINE_SIZE));
 #endif /* CONFIG_CMDLINE */
 
